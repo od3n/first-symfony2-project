@@ -16,6 +16,10 @@ class ArticleType extends AbstractType
     {
         $builder
             ->add('title')
+            ->add('description', 'text', array(
+                'required' => false
+                )
+            )
         ;
     }
     
