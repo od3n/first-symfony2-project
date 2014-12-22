@@ -1,0 +1,31 @@
+hello:
+    path:     '/hello/{name}'
+    defaults: { _controller: AcmeHelloBundle:Hello:index, name: User}
+
+redirect:
+    path:     '/redirect'
+    defaults: { _controller: AcmeHelloBundle:Hello:redirect}
+
+forward:
+    path:     '/forward/{name}'
+    defaults: { _controller: AcmeHelloBundle:Hello:forward}
+
+renderme:
+    path:     '/renderme/{name}'
+    defaults: { _controller: AcmeHelloBundle:Hello:renderme}
+
+notfound:
+    path:     '/notfound'
+    defaults: { _controller: AcmeHelloBundle:Hello:notfound}
+
+exception:
+    path:     '/exception'
+    defaults: { _controller: AcmeHelloBundle:Hello:exception}
+
+getsession:
+    path:     '/getsession'
+    defaults: { _controller: AcmeHelloBundle:Hello:getsession}
+
+setsession:
+    path:     '/setsession'
+    defaults: { _controller: AcmeHelloBundle:Hello:setsession}
