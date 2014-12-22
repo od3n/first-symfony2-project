@@ -1,3 +1,30 @@
-acme_article_homepage:
-    path:     /hello/{name}
-    defaults: { _controller: AcmeArticleBundle:Default:index }
+articles:
+    path:     /
+    defaults: { _controller: "AcmeArticleBundle:Article:index" }
+
+articles_show:
+    path:     /{id}/show
+    defaults: { _controller: "AcmeArticleBundle:Article:show" }
+
+articles_new:
+    path:     /new
+    defaults: { _controller: "AcmeArticleBundle:Article:new" }
+
+articles_create:
+    path:     /create
+    defaults: { _controller: "AcmeArticleBundle:Article:create" }
+    requirements: { _method: post }
+
+articles_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AcmeArticleBundle:Article:edit" }
+
+articles_update:
+    path:     /{id}/update
+    defaults: { _controller: "AcmeArticleBundle:Article:update" }
+    requirements: { _method: post|put }
+
+articles_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AcmeArticleBundle:Article:delete" }
+    requirements: { _method: post|delete }
